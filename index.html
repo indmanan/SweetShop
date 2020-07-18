@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sweetshop</title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		header{
+			
+			width: 100%;
+			height: 60px;
+			float: left;
+			box-sizing: border-box;
+			padding: 5px;
+		}
+		#brand-name{
+			float: left;
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+			margin-top: 7px;
+			margin-left: 25px;
+		}
+		#tag-line{
+			float: right;
+			font-family: calibri;
+			margin-right: 25px;
+		}
+		nav{
+			width: 100%;
+			height: 120px;
+			float: left;
+			background-color: #ff1c1c;
+			box-sizing: border-box;
+			padding: 30px;
+		}
+		#search-box{
+			width: 500px;
+			height: 40px;
+			border-style: none; 
+			box-sizing: border-box;
+			float: left;
+			font-size: 15px;
+			padding: 10px;
+			margin-top: 3px;
+		}
+		#search-btn{
+			border-style: none;
+			width: 110px;
+			height: 40px;
+			box-sizing: border-box;
+			float: left;
+			margin-left: 3px;
+			background-color: white;
+			margin-top: 3px;
+		}
+		#nav-table{
+			float: right;
+			width: 600px;
+			height: 45px;
+			box-sizing: border-box;
+		}
+		#nav-box{
+			background-color: white;
+			width: 20%;
+			box-sizing: border-box;
+			text-align: center; 
+		}
+		a{
+			text-decoration: none;
+			color: #323232;
+			font-family: sans-serif;
+		}
+		section{
+			width: 100%;
+			height: 1950px;
+			float: left;
+			box-sizing: border-box;
+			padding: 30px;
+		}
+		#venue{
+			float: left;
+		}
+		#mobile{
+			float: right;
+		}
+		#popular-sweets{
+			width: 720px;
+			height: 550px;
+			background-color: magenta;
+			box-sizing: border-box;
+			float: left;
+			clear: left;
+			margin-top: 40px;
+			padding: 5px;
+		}
+		#sweets-header{
+			font-family: sans-serif;
+			color: #323232;
+			margin: 0;
+			padding: 0;
+			color: white;
+			margin-left: 25px;
+			margin-top: 15px;
+		}
+		#popular-sweets-img{
+			width: 300px;
+			height: 200px;
+			box-sizing: border-box;
+			float: left;
+			margin: 25px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: ghostwhite;
+		}
+		#price-chart{
+			width: 560px;
+			height: 490px;
+			background-color: black;
+			float: right;
+			margin-top: 40px;
+			box-sizing: border-box;
+			
+		}
+		#price-header{
+			background-color:black;
+			height: 50px;
+			color: white;
+			font-family: sans-serif;
+			text-align: center;
+		}
+		#price-list{
+			height: 490px; 
+			background-color: red;
+		}
+		#sweets-name{
+			font-family: century-gothic;
+			color: white;
+			font-size: 25px;
+			
+		}
+		#sweets-price{
+			font-family: century-gothic;
+			color: white;
+			font-size: 25px;
+			list-style: none;
+			
+		}
+		legend{
+			 font-family: sans-serif;
+			font-size: 25px;
+			color: #323232;
+			font-weight: bold;
+		}
+		fieldset{
+			width: 720px;
+			height: 720px;
+			margin-top: 50px;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #ccc;
+			box-sizing: border-box;
+			float: left;
+		}
+		form{
+			font-family: sans-serif;
+			color: #323232
+		}
+		#form-box{
+			width:100%;
+			height:45px;
+			box-sizing: border-box;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #ccc;
+			margin-top: 5px;
+		
+		}
+		#address{
+			width: 100%;
+			height: 100px;
+			border-width: 1px;
+			border-color: #ccc;
+			border-style: solid;
+			margin-top: 5px;
+			box-sizing: border-box;
+		}
+		#submit{
+			border-width: 1px;
+			border-color: #ccc;
+			border-style: solid;
+			background-color: white;
+			padding: 10px;
+			float: right;
+			margin-top: 10px;
+		}
+		#aside{
+			width: 560px;
+			height: 707px;
+			float: right;
+			box-sizing: border-box;
+			border-width: 1px;
+			border-style: solid;
+			border-color:#ccc;
+			margin-top: 62px;
+			padding: 20px;
+		}
+		#about{
+			font-family: sans-serif;
+			text-align: center;
+		}
+		#about-us{
+			font-family: sans-serif;
+			color: #323232;
+			text-align: justify;
+			line-height: 24px
+		}
+		#more-sweets-header{
+			 width: 100%;
+			height: 50px;
+			float: left;
+			box-sizing: border-box;
+			margin-top: 100px;
+			border-radius: 50%;
+			
+		}
+		#more-sweets{
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			margin-top: 12px;
+			
+		}
+		#more-sweets-box{
+			width: 200px;
+			height:230px;
+			
+			box-sizing: border-box;
+			float: left;
+			margin: 20px;
+			margin-top: 50px;
+			margin-left: 30px;
+			padding: 20px;
+		}
+		#buy-btn{
+			width:140px;
+			height: 40px;
+			margin-top: 15px;
+			background-color: white;
+			box-sizing: border-box;
+		}
+		footer{
+			width:100%;
+			height: 280px;
+			background-color: black;
+			box-sizing: border-box;
+			float: left;
+			padding: 30px;
+		}
+		#contact-us{
+			width: 300px;
+			height: 200px;
+			box-sizing: border-box;
+			float: left;
+			
+		}
+		#brand-details{
+			width: 300px;
+			height: 200px;
+			box-sizing: border-box;
+			float: right;
+		}
+		#c-us{
+			color: white;
+			float: left;
+			font-family: sans-serif;
+			padding: 0;
+			margin: 0;
+			margin-top: 10px;
+		}
+		#c-num{
+			color: white;
+			float: left;
+			line-height:30px;
+			margin-top: 5px;
+			font-family: calibri;
+		}
+		#developer{
+			color: white;
+			float: left;
+			clear: left;
+			margin-left: 45%;
+			font-family: sans-serif;
+			
+		}
+	</style>
+	</head>
+<body>
+	<header>
+		<h1 id="brand-name">sweetshop.com</h1>
+		<p id="tag-line">India's Largest Sweets and Bakery Shop</p>
+	
+	</header>
+	<nav>
+	<form>
+		<input type="search" name="search" placeholder="Search this website" id="search-box"/>
+		<input type="submit" value="Search Now" id="search-btn" />
+		
+		</form>
+	<table id="nav-table">
+		<tr>
+			<td id="nav-box"><a href="#">Home</a></td>
+			<td id="nav-box"><a href="sweets.html">Sweets</a></td>
+			<td id="nav-box"><a href="#">Bakeries</a></td>
+			<td id="nav-box"><a href="#contact-us">Contact Us</a></td>
+			<td id="nav-box"><a href="#c-us">About Us</a></td>
+		</tr>
+		
+		</table>
+	
+	</nav>
+	<section>
+	<address id="venue">
+		Venue:F2/1 Kalpana Complex,Saheed Nagar Bhubneswar 751007
+		</address>
+		<address id="mobile">
+		Order Online : +919337164799 , +917653075590
+		</address>
+		<div id="popular-sweets">
+			<h1 id="sweets-header">Our Popular Sweets</h1>
+			<img src="images/barfi.jpg" id="popular-sweets-img" />
+			<img src="images/gulab.jpg" id="popular-sweets-img" />
+			<img src="images/laddu.jpg" id="popular-sweets-img" />
+			<img src="images/sweets.jpg" id="popular-sweets-img" />
+		
+		</div>
+		<table id="price-chart">
+		<tr>
+			<td id="price-header">Sweets Name</td>
+			<td id="price-header">Prices/Kg</td>
+		</tr>
+		<tr>
+			<td id="price-list">
+				<ol id="sweets-name">
+				<li>Rasogulla</li>
+					<hr color="white" />
+				<li>Balishahi</li>
+					<hr color="white" />
+				<li>Rajbhog</li>
+					<hr color="white" />
+				<li>Gulab Jamun</li>
+					<hr color="white" />
+				<li>Kalakand</li>
+					<hr color="white" />
+				<li>Rasmalai</li>
+					<hr color="white" />
+				<li>Barfi</li>
+					<hr color="white" />
+				<li>Ladoo</li>
+					<hr color="white" />
+				</ol>
+			
+			
+			</td>
+			<td id="price-list">
+			<ol id="sweets-price">
+				<li>Rs 300</li>
+					<hr color="white" />
+				<li>Rs 620</li>
+					<hr color="white" />
+				<li>Rs 420</li>
+					<hr color="white" />
+				<li>Rs 300</li>
+					<hr color="white" />
+				<li>Rs 380</li>
+					<hr color="white" />
+				<li>Rs 200</li>
+					<hr color="white" />
+				<li>Rs 460</li>
+					<hr color="white" />
+				<li>Rs 220</li>
+					<hr color="white" />
+				</ol>
+			
+			
+			</td>
+		</tr>
+		</table>
+		<fieldset id="form-section">
+			<legend>Order Online</legend>
+		<form>
+			<br /><br />
+			Buyer Name
+			<br /> 
+			<input type="text" name="Buyer name" id="form-box" placeholder="type your name here" />
+			<br /><br /><br />
+			 Mobile
+			<br />
+			<input type="number" name="Mobile" id="form-box" placeholder="type your phone number" />
+			<br /><br /><br />
+			Choose Sweets
+			<br />
+			<select name="Choose sweets" id="form-box">
+				<option value="Rasogulla">Rasogulla</option>
+				<option value="Balishahi">Balishahi</option>
+				<option value="Raj Bhog">Raj Bhog</option>
+				<option value="Gulab Jamun">Gulab Jamun</option>
+				<option value="Kalakand">Kalakand</option>
+				<option value="Rasmalai">Rasmalai</option>
+				<option value="Barfi">Barfi</option>
+				<option value="Ladoo">Ladoo</option>
+			</select>
+			<br /><br /><br />
+			Quantity
+			<br />
+			<input type="text" name="Quantity" id="form-box" placeholder="1 KG" />
+			<br /><br /><br />
+			Address
+			<br />
+			<textarea name="Address" id="address" >
+			</textarea>
+			<br />
+			<input type="submit" value="Order Now" id="submit" />
+		</form>
+		</fieldset>
+	<div id="aside">
+		<h1 id="about">About Us</h1>
+		<hr />
+		<p id="about-us">
+		The about us page is commonly used by all types of businesses to give customers more insight into who is involved with a given business and exactly what it does. The history of a business is often provided, and the histories of the people in charge are usually expressed through short articles, usually accompanied by photographs.
+		Depending on the specific company, some information about goals, attitude or other aspects of culture that aren't strictly tied to business practices are included as well. The about us page is often a reflection of the purpose and personality of the business and its owners or top employees. Finally, the page can also incorporate contact or locational information. One way to view the about us concept is as a text self-portrait or short autobiography created by a business.
+		What is the purpose of an about us page?
+		The primary purpose of an about us page is to inform the reader about the company and its operations. This is a straightforward goal that nearly all businesses have to fulfill in some fashion or another. However, there are other reasons why about us pages are common fixtures on business websites. The text on these pages is a marketing tool for a business, enticing potential customers with both the history and the aspirations of a business, as well as adding a human element. Additionally, about us pages are incorporated into search-engine marketing efforts as a way to find potential customers through Web searches.
+		About us pages serve much the same purpose for retailers who sell less-common or unique items as well. Additionally, they allow for an in-depth explanation of what brought the ecommerce store owner to the specific market and the thought process that led to the items being created and sold.
+
+
+		
+		</p>
+		
+		
+		</div>
+		
+	<div id="more-sweets-header">
+		<h1 id="more-sweets">More Sweets</h1>
+		
+		</div>
+		<div id="more-sweets-box">
+			<img src="images/a.png" width="180" height="140" alt="a" />
+			<a href="#form-section"><button id="buy-btn">Buy Now</button></a>
+		</div>
+		<div id="more-sweets-box">
+			<img src="images/b.png" width="180" height="140" alt="b" />
+			<a href="#form-section"><button id="buy-btn">Buy Now</button></a>
+		</div>
+		<div id="more-sweets-box">
+			<img src="images/c.png" width="180" height="140" alt="c" />
+			<a href="#form-section"><button id="buy-btn">Buy Now</button></a>
+		</div>
+		<div id="more-sweets-box">
+			<img src="images/d.png" width="170" height="140" alt="d" />
+			<a href="#form-section"><button id="buy-btn">Buy Now</button></a>
+		</div>
+		<div id="more-sweets-box">
+			<img src="images/e.jpg" width="180" height="140" alt="e" />
+			<a href="#form-section"><button id="buy-btn">Buy Now</button></a>
+		</div>
+	</section>
+	<footer>
+		<div id="contact-us">
+			<h1 id="c-us">Contact Us</h1><br><br>
+			<address id="c-num">
+				Website : www.sweetshop.com<br />
+				Email : sweetshop@gmail.com<br />
+				Mobile : +99337164799 , +917653075590
+			
+			</address>
+		
+		</div>
+		<div id="brand-details">
+			<h1 id="c-us">About Us</h1><br><br>
+			<address id="c-num">
+				We are the top most quality sweets seller inour area.We also make best quality of food and bakeries.We provide <br /><b>free home delivery.<br />Call Us Now</b>
+			</address>
+		</div>
+		<address id="developer">Developed By : manan<br />Email : manan@asia.com</address>
+	</footer>
+	</body>
+</html>
+
+
+
+
+
+
